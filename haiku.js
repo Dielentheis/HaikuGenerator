@@ -1,6 +1,5 @@
 var fs = require('fs');
 var dict = fs.readFileSync('./cmudict.txt').toString();
-//var wordArr = makeWordArr();
 
 // creates 2d array of words that are put in the inner array at the index of the number of syllables they have (minus 1 because of 0 indexing)
 function makeWordArr() {
@@ -54,8 +53,12 @@ function findNumberSyllables(str) {
 	return -1;
 }
 
+
 function createHaiku(structure) {
     console.log("this should log a haiku with the structure " + structure);
+    var wordArr = makeWordArr();
+
+
 }
 
 // puts createHaiku in the exports object
@@ -64,69 +67,3 @@ module.exports = {
   createHaiku: createHaiku,
 };
 
-
-
-makeWordArr();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var fs = require("fs");
-// var cmudictFile = readCmudictFile('./cmudict.txt');
-
-// function readCmudictFile(file){
-//   return fs.readFileSync(file).toString();
-// }
-
-// function formatData(data){    
-//    	var lines = data.toString().split("\n"), lineSplit
-   
-//    	lines.forEach(function(line){
-//    		lineSplit = line.split("  ");    
-//    	console.log("The word " + lineSplit[0] + " has this phoneme layout: " + lineSplit[1]); 
-
-//   });   
-// }
-
-// formatData(cmudictFile);
-
-// console.log(cmudictFile);
